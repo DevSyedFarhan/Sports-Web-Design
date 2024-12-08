@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: ogg;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#left{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    color: white;
+    overflow: hidden;
+}
+#overlay{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: orangered;
+    z-index: -999;
+    animation: move; 
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+#left img{
+    z-index: -99;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 200%;
+    height: 100%;
+    animation: round;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    object-fit: cover;
+    opacity: 0;
+}
+
+#left #nav{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    margin: 40px 70px;
+}
+#nav i {
+    font-size: 18px;
+    animation: move;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#nav h2 {
+    font-size: 18px;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+}
+#left h1{
+    position: relative;
+    font-size: 50px;
+    position: absolute;
+    right: 3%;
+    bottom: 5%;
+    animation: txt; 
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+#left #left-i{
+    position: absolute;
+    right: 80%;
+    bottom: 5%;
+    font-size: 40px;
+    animation: move;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+#right{
+    position: relative;
+    background-color:white;
+    width: 50%;
+    height: 100%;
+}
+
+#pic-1{
+    top: -5%;
+    right: 30%;
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    background-image: url(https://images.unsplash.com/photo-1549210194-fb0aac030c32?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: 50% 50%;
+    background-size: cover;
+    animation: move;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#pic-2{
+    position: absolute;
+    transform: translate(-3%, -50%);
+    top: 50%;
+    right: 55%;
+    position: absolute;
+    width: 250px;
+    height: 380px;
+    background-image: url(https://t4.ftcdn.net/jpg/06/63/16/95/360_F_663169537_0UhlWUxsMqsqjlK9rsZfF48jaswA90QU.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    animation: start;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+#pic-3{
+    bottom: -2%;
+    right: 14%;
+    position: absolute;
+    width: 240px;
+    height: 270px;
+    background-image: url(https://images.unsplash.com/photo-1577471488278-16eec37ffcc2?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmFza2V0YmFsbCUyMG1hdGNofGVufDB8fDB8fHww);
+    background-position: 50% 50%;
+    background-size: cover;
+    animation: move;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#text{
+    top: 30%;
+    right: 22%;
+    border: 3px solid black;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    font-family: Poppins;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    animation: move;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+#text h5 {
+    font-family: Poppins ;
+    font-size: 12px;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#righttxt {
+    top: 25%;
+    right: -22%;
+    font-size: 60px;
+    position: absolute;
+    transform: rotate(-90deg);
+    animation: top;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes start{
+    0%{
+        right: 30%;
+        opacity: 0;
+        top: 50%;
+    }
+    100%{
+        right: 55%;
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@keyframes top{
+    0%{
+        right: -40%;
+        opacity: 0;
+        
+    }
+    100%{
+        right: -22%;
+        opacity: 1;
+    }
+}
+
+@keyframes bottom {
+    0%{
+        transform: translate(-30%, -50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes round{
+    0%{
+        transform: rotate(25deg) scale(1.4);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(0) scale(1);
+    }
+    
+}
+
+@keyframes txt {
+    0%{
+        bottom: -5%;
+        opacity: 0;
+    }
+
+    100%{
+        bottom: 5%;
+        opacity: 1;
+    }
+    
+}
